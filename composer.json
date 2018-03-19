@@ -1,0 +1,22 @@
+{
+  "name": "rangelreale/grpcutil",
+  "type": "library",
+  "description": "gRPC utils PHP",
+  "keywords": ["rpc"],
+  "homepage": "https://grpc.io",
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "require": {
+    "php": ">=5.5.0",
+    "grpc/grpc": ">=1.7.0"
+  },
+  "suggest": {
+    "ext-protobuf": "For better performance, install the protobuf C extension.",
+    "google/protobuf": "To get started using grpc quickly, install the native protobuf library."
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}
