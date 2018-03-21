@@ -32,7 +32,7 @@ class Util
      */
     public static function unpackStatusDetails($rpcStatus) {
         $ret = [];
-        foreach ($rpcStatus->getDetails as $det) {
+        foreach ($rpcStatus->getDetails() as $det) {
             $ret[] = $det->unpack();
         }
         return $ret;
@@ -49,5 +49,6 @@ class Util
         if ($rpcStatus->getCode() != \Grpc\STATUS_OK) {
             throw new Exception($rpcStatus);
         }
+        return $rpcStatus;
     }
 }
